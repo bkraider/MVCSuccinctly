@@ -1,6 +1,13 @@
-﻿@{
+﻿@model MVCSuccinctly.Models.GreeetingModel
+
+@{
     ViewBag.Title = "Home Page";
 }
+
+<hgroup class="title">
+    <h2>@Model.Greeting</h2>
+    <h3>@Model.Name</h3>
+</hgroup>
 
 <div class="jumbotron">
     <h1>ASP.NET</h1>

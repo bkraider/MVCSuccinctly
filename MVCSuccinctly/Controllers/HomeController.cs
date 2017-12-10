@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MVCSuccinctly.Models;
 
 namespace MVCSuccinctly.Controllers
 {
@@ -10,7 +11,12 @@ namespace MVCSuccinctly.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var model = new GreeetingModel
+            {
+                Greeting = "Welcome to the World of MVC",
+                Name = "Your friendly neighborhood MVC app"
+            };
+            return View(model);
         }
 
         public ActionResult About()
